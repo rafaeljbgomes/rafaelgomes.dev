@@ -24,15 +24,19 @@ Open [http://localhost:3000](http://localhost:3000) while the development server
 
 The page shell remains server-rendered. Only the project carousel and dialog tree are client components because they need state, scroll observation, animation preferences, and focus-managed dialogs.
 
-## Metadata and deployment
+## Metadata and Vercel deployment
 
-Set `NEXT_PUBLIC_SITE_URL` to the deployed canonical origin, including protocol and without a trailing path:
+The site uses Vercel's `VERCEL_PROJECT_PRODUCTION_URL` system variable to generate its canonical, Open Graph, and Twitter URLs automatically when deployed to the generated `*.vercel.app` domain. No project environment variable or `vercel.json` file is required for the initial Hobby deployment.
+
+If a custom domain is added later, set `NEXT_PUBLIC_SITE_URL` in Vercel's Production environment to the canonical origin, including protocol and without a trailing path. It takes precedence over the Vercel domain:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://example.com
 ```
 
-When present, it enables the canonical URL, metadata base, and Open Graph URL. The site intentionally does not declare an Open Graph image until a final preview asset is available.
+The App Router metadata convention serves `src/app/opengraph-image.png` as the social-preview image and `src/app/icon.svg` as the site icon.
+
+To deploy, import `rafaeljbgomes/rafaelgomes.dev` in Vercel, select the default Next.js framework settings, and deploy `main`. The project requires Node.js 20.9 or later. After the first deployment, confirm the generated production URL and its Open Graph preview.
 
 ## Media
 

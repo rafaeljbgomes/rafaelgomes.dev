@@ -15,8 +15,14 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : undefined);
+
 export const metadata: Metadata = {
-  metadataBase: process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL) : undefined,
+  metadataBase: siteUrl ? new URL(siteUrl) : undefined,
   title: {
     default: "Rafael Gomes | Junior Backend Engineer & DevOps",
     template: "%s | Rafael Gomes",
@@ -27,17 +33,17 @@ export const metadata: Metadata = {
   authors: [{ name: "Rafael Gomes" }],
   keywords: ["backend engineer", "DevOps", "platform engineering", "software architecture", "Rafael Gomes"],
   robots: { index: true, follow: true },
-  alternates: process.env.NEXT_PUBLIC_SITE_URL ? { canonical: "/" } : undefined,
+  alternates: siteUrl ? { canonical: "/" } : undefined,
   openGraph: {
     type: "website",
     locale: "en_US",
     title: "Rafael Gomes | Junior Backend Engineer & DevOps",
     description: "Backend engineering, delivery discipline, and practical systems architecture.",
-    url: process.env.NEXT_PUBLIC_SITE_URL ? "/" : undefined,
+    url: siteUrl ? "/" : undefined,
     siteName: "Rafael Gomes Portfolio",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Rafael Gomes | Junior Backend Engineer & DevOps",
     description: "Backend engineering, delivery discipline, and practical systems architecture.",
   },
