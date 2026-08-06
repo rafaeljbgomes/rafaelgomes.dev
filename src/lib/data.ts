@@ -140,8 +140,18 @@ export const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1600&auto=format&fit=crop",
-        alt: "Abstract visual representing distributed services and deployment flow.",
+        src: "/projects/microservices-reengineering/DomainModel.png",
+        alt: "Domain model for the microservices reengineering platform.",
+      },
+      {
+        type: "image",
+        src: "/projects/microservices-reengineering/VL_N2_P2.png",
+        alt: "Architecture view for the microservices reengineering platform.",
+      },
+      {
+        type: "image",
+        src: "/projects/microservices-reengineering/VL_N3.png",
+        alt: "Deployment view for the microservices reengineering platform.",
       },
     ],
     accent: "01",
@@ -170,14 +180,8 @@ export const projects: Project[] = [
     media: [
       {
         type: "video",
-        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-        poster: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1600&auto=format&fit=crop",
-        alt: "Health-tech visual representing a patient-facing diabetes platform.",
-      },
-      {
-        type: "image",
-        src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1600&auto=format&fit=crop",
-        alt: "Health-tech visual representing patient-facing product workflows.",
+        src: "/projects/diabetes-literacy-assistant/labdsoft_demo2.mp4",
+        alt: "Demonstration of the Diabetes Literacy Assistant.",
       },
     ],
     accent: "02",
@@ -206,8 +210,23 @@ export const projects: Project[] = [
     media: [
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600&auto=format&fit=crop",
-        alt: "Abstract visual representing WebAssembly sandboxing and security evaluation.",
+        src: "/projects/webpack-wasm-sandbox/architecture-build-time.png",
+        alt: "Build-time architecture of the WebAssembly sandbox plugin.",
+      },
+      {
+        type: "image",
+        src: "/projects/webpack-wasm-sandbox/architecture-components.png",
+        alt: "Component architecture of the WebAssembly sandbox plugin.",
+      },
+      {
+        type: "image",
+        src: "/projects/webpack-wasm-sandbox/architecture-runtime.png",
+        alt: "Runtime architecture of the WebAssembly sandbox plugin.",
+      },
+      {
+        type: "video",
+        src: "/projects/webpack-wasm-sandbox/demo.mp4",
+        alt: "Demonstration of the WebAssembly sandbox plugin.",
       },
     ],
     githubUrl: "https://github.com/RafaelGomes1211426/webpack-wasm-sandbox-plugin",
@@ -237,14 +256,18 @@ export const projects: Project[] = [
     media: [
       {
         type: "video",
-        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-        poster: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop",
-        alt: "Abstract visual representing a distributed multi-agent management interface.",
+        src: "/projects/MASManager/demonstração_PESTI.mp4",
+        alt: "Demonstration of the MAS Manager interface.",
       },
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop",
-        alt: "Abstract visual representing a multi-agent system topology.",
+        src: "/projects/MASManager/Diagramama_Componentes_v3.png",
+        alt: "Component diagram for the MAS Manager research prototype.",
+      },
+      {
+        type: "image",
+        src: "/projects/MASManager/Modelo_Dominio.png",
+        alt: "Domain model for the MAS Manager research prototype.",
       },
     ],
     githubUrl: "https://github.com/RafaelGomes1211426/MASManager",
