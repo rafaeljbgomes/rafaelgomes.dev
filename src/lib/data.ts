@@ -60,7 +60,7 @@ export const focusAreas: FocusArea[] = [
       "Built Jenkins and GitHub Actions pipelines for automated validation.",
       "Uses automation to make changes safer, repeatable, and easier to review.",
     ],
-    tools: ["Docker", "Docker Swarm", "Jenkins", "GitHub Actions", "Maven", "pytest"],
+    tools: ["Docker", "Docker Swarm", "Jenkins", "GitHub Actions", "Maven"],
   },
   {
     title: "Architecture decisions",
@@ -112,10 +112,55 @@ export const skills: Skill[] = [
   { name: "k6", category: "quality" },
   { name: "Vitest", category: "quality" },
   { name: "Mocha / Chai / Sinon", category: "quality" },
-  { name: "pytest", category: "quality" },
 ];
 
 export const projects: Project[] = [
+  {
+    id: "wasm-sandbox",
+    title: "WebAssembly npm Sandbox Plugin",
+    summary:
+      "Developed a Webpack plugin that isolates selected third-party npm dependencies in a WebAssembly-backed JavaScript sandbox.",
+    focus: "Master's dissertation / Security tooling",
+    role: "Security Tooling & Research Engineer",
+    status: "completed",
+    year: "2025-2026",
+    stack: ["TypeScript", "Webpack", "WebAssembly", "QuickJS", "JavaScript Security"],
+    problem:
+      "Browser applications rely on third-party npm packages that can execute with broad ambient capabilities, creating supply-chain risk.",
+    contribution:
+      "I built the Webpack integration, sandbox execution bridge, policy experiments, and performance-measurement workflow used to evaluate the approach.",
+    decisions: [
+      "Used QuickJS compiled to WebAssembly to isolate dependency execution.",
+      "Built a JSON-RPC-style bridge between host code and sandboxed execution.",
+      "Measured runtime overhead and compatibility constraints as part of the evaluation.",
+    ],
+    outcome:
+      "The completed project provides a working isolation mechanism and evidence on the compatibility and performance trade-offs involved.",
+    media: [
+      {
+        type: "video",
+        src: "/projects/webpack-wasm-sandbox/demo.mp4",
+        alt: "Demonstration of the WebAssembly sandbox plugin.",
+      },
+      {
+        type: "image",
+        src: "/projects/webpack-wasm-sandbox/architecture-build-time.png",
+        alt: "Build-time architecture of the WebAssembly sandbox plugin.",
+      },
+      {
+        type: "image",
+        src: "/projects/webpack-wasm-sandbox/architecture-components.png",
+        alt: "Component architecture of the WebAssembly sandbox plugin.",
+      },
+      {
+        type: "image",
+        src: "/projects/webpack-wasm-sandbox/architecture-runtime.png",
+        alt: "Runtime architecture of the WebAssembly sandbox plugin.",
+      },
+    ],
+    githubUrl: "https://github.com/RafaelGomes1211426/webpack-wasm-sandbox-plugin",
+    accent: "01",
+  },
   {
     id: "microservices-reengineering",
     title: "Microservices Reengineering Platform",
@@ -154,7 +199,7 @@ export const projects: Project[] = [
         alt: "Deployment view for the microservices reengineering platform.",
       },
     ],
-    accent: "01",
+    accent: "02",
   },
   {
     id: "diabetes-literacy-assistant",
@@ -184,52 +229,6 @@ export const projects: Project[] = [
         alt: "Demonstration of the Diabetes Literacy Assistant.",
       },
     ],
-    accent: "02",
-  },
-  {
-    id: "wasm-sandbox",
-    title: "WebAssembly npm Sandbox Plugin",
-    summary:
-      "Developing a Webpack plugin that isolates selected third-party npm dependencies in a WebAssembly-backed JavaScript sandbox.",
-    focus: "Master's dissertation / Security tooling",
-    role: "Security Tooling & Research Engineer",
-    status: "in-progress",
-    year: "2025-2026",
-    stack: ["TypeScript", "Webpack", "WebAssembly", "QuickJS", "JavaScript Security"],
-    problem:
-      "Browser applications rely on third-party npm packages that can execute with broad ambient capabilities, creating supply-chain risk.",
-    contribution:
-      "I built the Webpack integration, sandbox execution bridge, policy experiments, and performance-measurement workflow used to evaluate the approach.",
-    decisions: [
-      "Used QuickJS compiled to WebAssembly to isolate dependency execution.",
-      "Built a JSON-RPC-style bridge between host code and sandboxed execution.",
-      "Measured runtime overhead and compatibility constraints as part of the evaluation.",
-    ],
-    outcome:
-      "The ongoing dissertation provides a working isolation mechanism and evidence on the compatibility and performance trade-offs involved.",
-    media: [
-      {
-        type: "image",
-        src: "/projects/webpack-wasm-sandbox/architecture-build-time.png",
-        alt: "Build-time architecture of the WebAssembly sandbox plugin.",
-      },
-      {
-        type: "image",
-        src: "/projects/webpack-wasm-sandbox/architecture-components.png",
-        alt: "Component architecture of the WebAssembly sandbox plugin.",
-      },
-      {
-        type: "image",
-        src: "/projects/webpack-wasm-sandbox/architecture-runtime.png",
-        alt: "Runtime architecture of the WebAssembly sandbox plugin.",
-      },
-      {
-        type: "video",
-        src: "/projects/webpack-wasm-sandbox/demo.mp4",
-        alt: "Demonstration of the WebAssembly sandbox plugin.",
-      },
-    ],
-    githubUrl: "https://github.com/RafaelGomes1211426/webpack-wasm-sandbox-plugin",
     accent: "03",
   },
   {
@@ -270,7 +269,6 @@ export const projects: Project[] = [
         alt: "Domain model for the MAS Manager research prototype.",
       },
     ],
-    githubUrl: "https://github.com/RafaelGomes1211426/MASManager",
     accent: "04",
   },
 ];
@@ -314,8 +312,8 @@ export const education: Education[] = [
     degree: "Master's Degree",
     field: "Software Engineering",
     institution: "Instituto Superior de Engenharia do Porto",
-    period: "Sep 2024 - Present",
-    status: "in-progress",
+    period: "Sep 2024 - 2026",
+    status: "completed",
     note: "Dissertation: WebAssembly-based isolation mechanisms for mitigating JavaScript and npm supply-chain attacks.",
   },
   {
