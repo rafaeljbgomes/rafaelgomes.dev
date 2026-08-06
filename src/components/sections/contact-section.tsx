@@ -17,13 +17,13 @@ const links = [
   },
   {
     label: "LinkedIn",
-    value: "rafael-gomes-42316928b",
+    value: "Rafael Gomes",
     href: contactInfo.linkedin,
     icon: Linkedin,
   },
   {
     label: "GitHub",
-    value: "RafaelGomes1211426",
+    value: "rafaeljbgomes",
     href: contactInfo.github,
     icon: Github,
   },

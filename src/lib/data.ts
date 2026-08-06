@@ -158,7 +158,7 @@ export const projects: Project[] = [
         alt: "Runtime architecture of the WebAssembly sandbox plugin.",
       },
     ],
-    githubUrl: "https://github.com/RafaelGomes1211426/webpack-wasm-sandbox-plugin",
+    githubUrl: "https://github.com/rafaeljbgomes/webpack-wasm-sandbox-plugin",
     accent: "01",
   },
   {
@@ -332,5 +332,5 @@ export const contactInfo: ContactInfo = {
   phone: "+351 914 684 794",
   location: "Arouca / Porto, Portugal",
   linkedin: "https://linkedin.com/in/rafael-gomes-42316928b",
-  github: "https://github.com/RafaelGomes1211426",
+  github: "https://github.com/rafaeljbgomes",
 };
