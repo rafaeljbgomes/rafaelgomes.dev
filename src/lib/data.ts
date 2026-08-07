@@ -329,7 +329,6 @@ export const education: Education[] = [
 
 export const contactInfo: ContactInfo = {
   email: "rafaelgomes1973@gmail.com",
-  phone: "+351 914 684 794",
   location: "Arouca / Porto, Portugal",
   linkedin: "https://linkedin.com/in/rafael-gomes-42316928b",
   github: "https://github.com/rafaeljbgomes",

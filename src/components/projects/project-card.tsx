@@ -34,7 +34,7 @@ export function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.24 }}
       transition={{ duration: 0.68, delay: index * 0.05, ease }}
-      className="grid w-[min(1320px,calc(100vw-3rem))] shrink-0 snap-start overflow-hidden rounded-[2.25rem] border border-porcelain/10 bg-white/[0.035] shadow-[0_30px_90px_rgba(0,0,0,0.36)] lg:grid-cols-[1.02fr_0.98fr]"
+      className="grid w-full shrink-0 snap-start overflow-hidden rounded-[2.25rem] border border-porcelain/10 bg-white/[0.035] shadow-[0_30px_90px_rgba(0,0,0,0.36)] lg:w-[min(1320px,calc(100vw-3rem))] lg:grid-cols-[1.02fr_0.98fr]"
     >
       <div className="relative min-h-[25rem] overflow-hidden bg-graphite-card-soft lg:min-h-[30rem]">
         {media ? <ProjectMediaDisplay media={media} projectTitle={project.title} mode="preview" /> : <div className="flex size-full items-center justify-center text-sm text-porcelain/40">Project media</div>}
