@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { contactInfo } from "@/lib/data";
@@ -42,13 +42,13 @@ export function ContactSection() {
           transition={{ duration: 0.7, ease }}
           className="soft-card overflow-hidden rounded-[2.75rem] p-6 md:p-10"
         >
-          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-            <div className="flex flex-col gap-7">
+          <div className="grid min-w-0 gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+            <div className="flex min-w-0 flex-col gap-7">
               <span className="eyebrow">Contact</span>
-              <h2 className="max-w-3xl text-balance text-5xl font-bold leading-[0.96] text-ink md:text-7xl">
+              <h2 className="max-w-3xl text-balance text-4xl font-bold leading-[0.96] text-ink sm:text-5xl md:text-7xl">
                 Let&apos;s build reliable software.
               </h2>
-              <p className="max-w-xl text-lg leading-8 text-muted-foreground">
+              <p className="max-w-xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
                 I am seeking junior Backend Engineering, DevOps, Platform Engineering, and secure-software
                 opportunities. If you need someone who values dependable services and disciplined delivery,
                 I&apos;d be glad to connect.
@@ -59,26 +59,22 @@ export function ContactSection() {
                   <MapPin className="size-4 text-ink/55" />
                   {contactInfo.location}
                 </span>
-                <a href={`tel:${contactInfo.phone}`} className="inline-flex items-center gap-2 transition-colors hover:text-ink">
-                  <Phone className="size-4 text-ink/55" />
-                  {contactInfo.phone}
-                </a>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <Button asChild size="lg" className="h-12 rounded-full px-6">
+                <Button asChild size="lg" className="h-12 w-full rounded-full px-6 sm:w-auto">
                   <a href={`mailto:${contactInfo.email}`}>
                     <Mail data-icon="inline-start" />
                     Email Rafael
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="h-12 rounded-full border-ink/10 bg-white/64 px-6">
+                <Button asChild size="lg" variant="outline" className="h-12 w-full rounded-full border-ink/10 bg-white/64 px-6 sm:w-auto">
                   <a href="#projects">Explore projects</a>
                 </Button>
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex min-w-0 flex-col gap-2">
               {links.map((link, index) => (
                 <motion.a
                   key={link.label}
