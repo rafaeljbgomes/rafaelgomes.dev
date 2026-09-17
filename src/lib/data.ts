@@ -116,6 +116,57 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
+    id: "clinicflow",
+    title: "ClinicFlow",
+    summary:
+      "Building a cloud-native therapy-practice platform prototype with role-aware workflows, event-driven services, and a locally runnable delivery stack.",
+    focus: "Backend / Cloud-native systems",
+    role: "Full-stack & Backend Engineer",
+    status: "in-progress",
+    year: "2026",
+    stack: ["Java", "Spring Boot", "PostgreSQL", "RabbitMQ", "Next.js", "Docker", "Helm", "Kubernetes", "Jenkins"],
+    problem:
+      "Therapy-practice workflows need clear ownership of patient, appointment, clinical, and notification responsibilities while keeping browser sessions and cross-service communication deliberate.",
+    contribution:
+      "I designed and implemented the local vertical slice across the Next.js BFF, five Spring Boot services, service-owned persistence, asynchronous notifications, and delivery tooling.",
+    decisions: [
+      "Kept domain logic behind Clean Architecture boundaries, with each service owning its database and Flyway migrations.",
+      "Used a same-origin Next.js BFF with HttpOnly sessions and CSRF protection, while services validate signed JWT claims and enforce ownership rules.",
+      "Connected services through RabbitMQ topic events with explicit contracts, then packaged the local stack with Docker Compose and Helm for Docker Desktop Kubernetes.",
+    ],
+    outcome:
+      "An active, locally runnable portfolio prototype with psychologist, patient, appointment, clinical, and simulated-notification flows. It uses synthetic demonstration data and is not production clinical software.",
+    media: [
+      {
+        type: "image",
+        src: "/projects/ClinicFlow/Today.png",
+        alt: "ClinicFlow psychologist practice workspace dashboard.",
+      },
+      {
+        type: "image",
+        src: "/projects/ClinicFlow/Patients.png",
+        alt: "ClinicFlow patient management workspace.",
+      },
+      {
+        type: "image",
+        src: "/projects/ClinicFlow/Calendar.png",
+        alt: "ClinicFlow appointment calendar.",
+      },
+      {
+        type: "image",
+        src: "/projects/ClinicFlow/Clinical.png",
+        alt: "ClinicFlow clinical case and care-plan workspace.",
+      },
+      {
+        type: "image",
+        src: "/projects/ClinicFlow/Login.png",
+        alt: "ClinicFlow sign-in screen.",
+      },
+    ],
+    githubUrl: "https://github.com/rafaeljbgomes/ClinicFlow",
+    accent: "01",
+  },
+  {
     id: "wasm-sandbox",
     title: "WebAssembly npm Sandbox Plugin",
     summary:
@@ -159,7 +210,7 @@ export const projects: Project[] = [
       },
     ],
     githubUrl: "https://github.com/rafaeljbgomes/webpack-wasm-sandbox-plugin",
-    accent: "01",
+    accent: "02",
   },
   {
     id: "microservices-reengineering",
@@ -199,7 +250,7 @@ export const projects: Project[] = [
         alt: "Deployment view for the microservices reengineering platform.",
       },
     ],
-    accent: "02",
+    accent: "03",
   },
   {
     id: "diabetes-literacy-assistant",
@@ -229,7 +280,7 @@ export const projects: Project[] = [
         alt: "Demonstration of the Diabetes Literacy Assistant.",
       },
     ],
-    accent: "03",
+    accent: "04",
   },
   {
     id: "mas-manager",
@@ -269,7 +320,7 @@ export const projects: Project[] = [
         alt: "Domain model for the MAS Manager research prototype.",
       },
     ],
-    accent: "04",
+    accent: "05",
   },
 ];
 
